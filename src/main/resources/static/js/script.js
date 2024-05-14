@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   changeTheme();
 });
 
-//TODO:
+
 function changeTheme() {
   //set to web page
 
@@ -39,7 +39,10 @@ function setTheme(theme) {
 //get theme from localstorage
 function getTheme() {
   let theme = localStorage.getItem("theme");
-  return theme ? theme : "light";
+  if(theme)
+    return theme;
+  else
+   return "light";
 }
 
 //change current page theme
